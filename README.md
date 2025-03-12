@@ -17,5 +17,5 @@ The processed image will be sent to you after a couple of minutes. The output fo
 
 ## Implementation
 
-See the page on src folder please.
+See [the page](src/README.md) please.
 
