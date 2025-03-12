@@ -1,7 +1,0 @@
-replicate==1.0.4
-fastapi==0.115.8
-pydantic==2.10.5
-requests==2.32.3
-upstash-workflow
-uvicorn[standard]==0.30.6
-fal-client
