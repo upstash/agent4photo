@@ -142,7 +142,7 @@ we use context.sleep which stalls the workflow for the time specified.
 
 Once your code is ready, you can deploy it on Vercel.
 
-Before you start deployment, create a vercel.json to specify build configuration. For our project structure, the vercel.json file looks like this:
+Before you start deployment, create a vercel.json in your project folder to specify build configuration. For our project structure, the vercel.json file looks like this:
 
 ```json
 {
