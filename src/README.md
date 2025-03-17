@@ -1,8 +1,8 @@
 ## Features
 - **Fetch Unseen Emails**: Connects to an IMAP server, retrieves unread emails, and extracts text and images.
 - **Process Text with OpenAI**: Uses GPT-4 to analyze email content and extract structured information.
-- **Enhance Images with Fal.ai**: Uploads images from emails to Fal.ai for processing.
-- **Send Processed Results via Email**: Returns processed images and text to the sender.
+- **Enhance Images with Fal.ai**: Modifies the image using fal.ai.
+- **Send Processed Results via Email**: Returns processed images back to the sender.
 
 
 You can see the full code available at main.py file. Below the basics of Workflow and Vercel, along with their usages in this project, will be explained.
@@ -38,7 +38,7 @@ from fastapi import FastAPI
 # Create FastAPI instance
 app = FastAPI()
 
-# Checking the environment variables
+# Check whether the environment variables are set properly
 @app.get("/")
 def read_root():
 
@@ -61,7 +61,7 @@ async def fal_wf(context: AsyncWorkflowContext):
 ...
 ```
 
-In this function, context variable will hold the request payload, which we do not have any for this example, provide utilities such as .run, .call or .sleep.
+In this function, context variable will hold the request payload, which we do not have any for this example, and provide utilities such as .run, .call or .sleep.
 
 ### Using a Function Inside the Workflow
 
@@ -165,14 +165,14 @@ Before you start deployment, create a vercel.json in your project folder to spec
 Open your terminal. 
 
 ```sh
-npm install -g vercel # Installing vercel
+npm install -g vercel # Install vercel
 cd path/to/your/project/folder # Navigate to your project folder
-vercel
+vercel # Deploy the project
 ```
 
 After a couple of seconds, you will be able to see your deployment on Vercel.
 
-You can try your deployment by sending a request like this:
+You can try your application by sending a request like this:
 
 ```sh
 curl -X POST "https://your-vercel-project-7ee79bd2.vercel.app/fal"
